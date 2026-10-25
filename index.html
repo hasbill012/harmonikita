@@ -436,6 +436,7 @@ async function createRoom(){
       createdAt:firebase.firestore.FieldValue.serverTimestamp()
     });
     roomCode=code;mySlot=0;
+localStorage.setItem("harmonikita_roomCode",roomCode);
     $("inviteCode").textContent=code;
     $("inviteBox").classList.remove("hidden");
     $("roomStatus").textContent="Ruang berhasil dibuat. Kirim kode ini kepada pasanganmu.";
@@ -468,6 +469,8 @@ async function joinRoom(){
       });
       roomCode=code;mySlot=1;
     }
+        localStorage.setItem("harmonikita_roomCode",roomCode);
+    localStorage.setItem("harmonikita_myUid",myUid);
     startRoomListener();
     $("roomStatus").textContent="Berhasil bergabung. Selamat memulai cerita kalian ♡";
   }catch(e){
@@ -700,9 +703,45 @@ function showResult(){
   $("essayResults").innerHTML=essayHtml;
   $("result").scrollIntoView({behavior:"smooth",block:"start"});
 }
-auth.signInAnonymously().then(()=>{
-  $("roomStatus").textContent="Siap. Buat ruang baru atau masukkan kode undangan.";
-}).catch(e=>{
+auth.setPersistence(firebase.auth.Auth.Persistence.LOCAL)
+.then(()=>auth.signInAnonymously())
+.then(async()=>{
+  await ensureAuth();
+
+  const savedCode=localStorage.getItem("harmonikita_roomCode");
+
+  if(savedCode){
+    const snap=await db.collection("rooms").doc(savedCode).get();
+
+    if(snap.exists){
+      const data=snap.data();
+      const ids=data.memberUids||[];
+
+      if(ids.includes(myUid)){
+        roomCode=savedCode;
+        mySlot=ids.indexOf(myUid);
+
+        $("roomStatus").textContent="Memulihkan ruang sebelumnya…";
+        $("joinCode").value=savedCode;
+
+        if(ids.length<2){
+          $("inviteCode").textContent=savedCode;
+          $("inviteBox").classList.remove("hidden");
+        }
+
+        startRoomListener();
+        return;
+      }
+    }
+
+    localStorage.removeItem("harmonikita_roomCode");
+  }
+
+  $("roomStatus").textContent=
+    "Siap. Buat ruang baru atau masukkan kode undangan.";
+})
+.catch(e=>{
+  console.error(e);
   $("roomStatus").textContent="Autentikasi gagal: "+e.message;
 });
 </script>
