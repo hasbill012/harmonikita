@@ -1,16 +1,115 @@
-<!doctype html>
+
+<!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>HarmoniKita — Kenali Perbedaan, Perkuat Hubungan</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HarmoniKita - Kuis Pasangan</title>
 <style>
-:root{--navy:#203f6c;--blue:#31588b;--pale:#edf4fc;--line:#dce7f5;--ink:#203754;--muted:#61738c;--pink:#fff0f2;--white:#fff}*{box-sizing:border-box}body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--ink);background:#fbfcff;line-height:1.55}header{height:74px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 max(5.5%,calc((100% - 1200px)/2));background:#fff;gap:20px;position:sticky;top:0;z-index:5}.brand{display:flex;gap:12px;align-items:center;font-weight:800;font-size:20px;color:var(--navy)}.heart{font-size:32px;line-height:1}.brand small{display:block;font-weight:400;font-size:11px;color:var(--muted);letter-spacing:.3px}nav{display:flex;gap:30px}nav a{color:#435a78;text-decoration:none;font-size:14px}nav a:hover{color:var(--blue)}button{font:inherit;cursor:pointer}.login{background:white;border:1px solid #b9cbe2;border-radius:30px;padding:9px 22px;color:var(--blue)}.hero{max-width:1200px;margin:auto;padding:45px 24px 35px;display:grid;grid-template-columns:1fr .95fr;gap:28px;align-items:center}.hero h1{font-size:clamp(34px,4vw,53px);line-height:1.09;letter-spacing:-1.4px;color:#1e3b62;margin:0 0 18px}.hero p{font-size:17px;color:#405a7a;max-width:530px;margin:0 0 22px}.primary{border:0;background:linear-gradient(135deg,#365e94,#244875);color:white;padding:14px 26px;border-radius:28px;font-weight:700;box-shadow:0 5px 12px #294c7c22}.primary:hover{filter:brightness(1.08);transform:translateY(-1px)}.mini{display:flex;gap:24px;margin-top:24px;color:#506786;font-size:13px}.mini span{display:flex;align-items:center;gap:8px}.mini b{font-size:18px}.illustration{min-height:260px;display:flex;align-items:center;justify-content:center;background:radial-gradient(ellipse at 45% 60%,#e8f1fb 0 30%,transparent 31%),radial-gradient(ellipse at 65% 70%,#fff0f0 0 30%,transparent 31%);border-radius:48% 42% 40% 46%;position:relative}.couple{font-size:clamp(100px,16vw,185px);filter:drop-shadow(0 7px 5px #20375412)}.quote{position:absolute;right:0;top:8px;max-width:180px;font-family:Georgia,serif;font-style:italic;color:#36557d;transform:rotate(4deg);font-size:17px}.layout{max-width:1200px;margin:0 auto;padding:5px 24px 42px;display:grid;grid-template-columns:minmax(0,2fr) minmax(260px,.85fr);gap:28px;align-items:start}.quiz,.sidecard{background:white;border:1px solid var(--line);border-radius:12px;box-shadow:0 3px 14px #2a4e7510}.quiz{padding:24px}.progress-label{display:flex;justify-content:space-between;font-size:13px;color:#3d5c83;margin-bottom:8px}.progress{height:10px;background:#e8edf5;border-radius:20px;overflow:hidden;margin-bottom:25px}.bar{height:100%;background:#5594d7;width:5%;border-radius:20px;transition:width .25s}.questionbox{border:1px solid #e0e9f6;border-radius:10px;padding:25px 24px}.qheading{display:flex;gap:16px;align-items:flex-start;margin-bottom:22px}.qicon{background:#e8f3ff;border-radius:50%;width:54px;height:54px;display:grid;place-items:center;font-size:26px;flex-shrink:0}.qheading h2{font-size:21px;line-height:1.45;margin:4px 0 0;color:#203f6c}.answers{display:grid;gap:11px}.answer{display:flex;align-items:center;gap:13px;border:1px solid #dce7f5;border-radius:16px;padding:13px 16px;min-height:54px;cursor:pointer;transition:.15s}.answer:hover{background:#f6f9fe;border-color:#a8c6e9}.answer.selected{background:#eef5ff;border-color:#4d84c4;box-shadow:0 0 0 1px #4d84c4}.radio{width:22px;height:22px;border:2px solid #cbd7e6;border-radius:50%;flex-shrink:0;display:grid;place-items:center}.selected .radio{border-color:#3c70a9}.selected .radio:after{content:"";width:10px;height:10px;border-radius:50%;background:#3c70a9}.letter{font-weight:700;color:#355a86}.answertext{font-size:14px}.buttons{display:flex;justify-content:space-between;gap:12px;margin-top:24px}.secondary{border:0;border-radius:28px;background:#eef2f7;color:#466080;padding:12px 20px}.secondary:disabled{opacity:.45;cursor:default}.next{min-width:160px}.side{display:grid;gap:14px}.sidecard{padding:20px}.sidecard h3{font-size:14px;margin:0 0 10px;color:#2c4e7a}.sidecard p{font-size:12px;color:#5a6f8b;margin:0}.purpose{background:#f0f6ff}.topics{display:grid;gap:10px}.topic{font-size:13px;color:#4b6484;display:flex;gap:10px;align-items:center}.topic span{background:#f2f6fc;border-radius:50%;width:30px;height:30px;display:grid;place-items:center}.note{background:var(--pink);border-color:#ffe2e6;display:flex;gap:12px;align-items:flex-start}.note strong{color:#c44f69;font-size:20px}.note p{font-size:13px}.result{display:none}.result h2{font-size:27px;color:var(--navy);margin-top:0}.resultbox{background:#f2f7ff;border-radius:12px;padding:18px;margin:16px 0}.result h3{margin-bottom:6px}.footer{background:#edf4fc;padding:28px max(5.5%,calc((100% - 1200px)/2));display:flex;justify-content:space-between;align-items:center;color:#486182;font-size:12px;gap:20px}.footer .brand{font-size:17px}.footer p{max-width:330px;text-align:right;margin:0}.hidden{display:none!important}@media(max-width:800px){header{padding:12px 18px;height:auto}nav{display:none}.hero{grid-template-columns:1fr;padding:34px 20px 25px}.hero h1{font-size:38px}.illustration{min-height:210px}.couple{font-size:130px}.layout{grid-template-columns:1fr;padding:0 16px 28px}.quiz{padding:17px}.questionbox{padding:17px 14px}.qheading h2{font-size:18px}.side{grid-template-columns:1fr}.mini{gap:12px;flex-wrap:wrap}.footer{padding:24px 20px;align-items:flex-start;flex-direction:column}.footer p{text-align:left}}
-</style></head>
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,sans-serif;background:#f4f7fc;color:#263950;line-height:1.6}
+header{padding:18px 6%;background:#fff;border-bottom:1px solid #dce5f0;color:#244b7c;font-size:22px;font-weight:bold}
+header small{display:block;font-size:11px;font-weight:normal}
+.hero{max-width:1000px;margin:auto;padding:30px 20px;display:flex;align-items:center;gap:20px}
+.hero>div{flex:1}
+h1{font-size:35px;line-height:1.2;color:#244b7c}
+.heart{font-size:85px;text-align:center}
+main{max-width:1000px;margin:0 auto 40px;padding:0 15px;display:grid;grid-template-columns:2fr 1fr;gap:18px}
+.card{background:white;border:1px solid #dce5f0;border-radius:14px;padding:20px;margin-bottom:15px}
+h2{color:#244b7c;margin-top:0}
+label{display:block;font-weight:bold;margin:12px 0 5px}
+input{width:100%;padding:12px;border:1px solid #cbd8e8;border-radius:9px;font-size:16px}
+button{padding:12px 17px;border-radius:25px;border:0;cursor:pointer;font-weight:bold;font-size:14px}
+.primary{background:#2c5689;color:white}
+.secondary{background:white;border:1px solid #b8cbe2;color:#2c5689}
+button:disabled{opacity:.4}
+.status{font-size:13px;color:#60738e;overflow-wrap:anywhere}
+.hidden{display:none!important}
+.progress{height:9px;background:#e5edf7;border-radius:10px;margin:10px 0 20px;overflow:hidden}
+.bar{height:100%;background:#548ed0;width:0}
+.question{padding:17px;border:1px solid #dce5f0;border-radius:12px}
+.option{padding:13px;border:1px solid #dce5f0;border-radius:10px;margin:10px 0;cursor:pointer}
+.option.selected{background:#edf5ff;border-color:#548ed0}
+.actions{display:flex;justify-content:space-between;gap:10px;margin-top:18px}
+.summary{background:#edf5ff;padding:15px;border-radius:10px}
+.result-item{padding:12px;border:1px solid #dce5f0;border-radius:10px;margin:12px 0}
+footer{background:#eaf1fa;padding:22px;text-align:center;color:#60738e;font-size:12px}
+@media(max-width:720px){.hero{padding:22px 18px}.hero h1{font-size:29px}.heart{font-size:60px}main{grid-template-columns:1fr}.card{padding:16px}}
+</style>
+</head>
 <body>
-<header><div class="brand"><span class="heart">♥</span><div>HarmoniKita<small>Kenali · Pahami · Bertumbuh</small></div></div><nav><a href="#beranda">Beranda</a><a href="#tes">Tes</a><a href="#hasil">Hasil</a><a href="#tips">Tips</a><a href="#tentang">Tentang</a></nav><button class="login" onclick="alert('Demo ini tidak memerlukan akun. Jawaban tersimpan sementara di perangkat ini.')">Masuk</button></header>
-<section class="hero" id="beranda"><div><h1>Kenali Perbedaan,<br>Perkuat Hubungan</h1><p>Setiap pasangan itu unik. Perbedaan bukan masalah, tapi kesempatan untuk saling memahami. Ikuti kuis ini untuk mengetahui cara terbaik menghadapi perbedaan dengan pasanganmu.</p><button class="primary" onclick="document.getElementById('tes').scrollIntoView({behavior:'smooth'})">Mulai Sekarang　→</button><div class="mini"><span><b>♡</b> Mudah diikuti</span><span><b>◷</b> Hanya 5–10 menit</span><span><b>♧</b> Tersinkron antar-HP</span></div></div><div class="illustration"><div class="couple" aria-label="Ilustrasi pasangan">👩🏻‍❤️‍👨🏻</div><div class="quote">“Bukan tentang siapa yang selalu benar, tapi bagaimana kita saling mengerti.” ♥</div></div></section>
-<main class="layout" id="tes"><section class="quiz"><div id="setupview" style="margin-bottom:22px"><h2 style="color:#203f6c;margin-top:0">Kuis Berdua 💙</h2><p>Buat ruang pasangan, lalu kirim kode undangan kepada pasanganmu agar kalian bisa menjawab dari HP masing-masing.</p><label style="display:block;margin:10px 0 5px;font-weight:600">Nama kamu</label><input id="myName" value="Kamu" maxlength="30" style="width:100%;padding:12px;border:1px solid #dce7f5;border-radius:10px;font:inherit"><button class="primary" style="margin-top:14px" onclick="createRoom()">Buat Ruang Pasangan</button><hr style="border:0;border-top:1px solid #dce7f5;margin:20px 0"><label style="display:block;margin:10px 0 5px;font-weight:600">Kode undangan dari pasangan</label><input id="joinCode" maxlength="12" placeholder="Masukkan kode undangan" style="width:100%;padding:12px;border:1px solid #dce7f5;border-radius:10px;font:inherit;text-transform:uppercase"><label style="display:block;margin:10px 0 5px;font-weight:600">Nama kamu</label><input id="joinName" value="Erviana" maxlength="30" style="width:100%;padding:12px;border:1px solid #dce7f5;border-radius:10px;font:inherit"><button class="primary" style="margin-top:14px" onclick="joinRoom()">Gabung dengan Kode →</button><p id="roomStatus" style="font-size:13px;color:#61738c;margin-top:12px">Menghubungkan ke layanan…</p><div id="inviteBox" class="hidden" style="background:#eef5ff;border-radius:10px;padding:14px;margin-top:12px"><b>Kode undangan pasangan:</b><div id="inviteCode" style="font-size:26px;font-weight:800;letter-spacing:3px;margin:6px 0"></div><button class="secondary" onclick="copyInvite()">Salin kode</button><p>Tunggu pasangan bergabung, lalu mulai menjawab.</p></div></div><div id="quizview" class="hidden"><div class="progress-label"><span id="progressText">Pertanyaan 1 dari 20</span><span id="percent">5%</span></div><div class="progress"><div class="bar" id="bar"></div></div><div class="questionbox"><div class="qheading"><div class="qicon">☏</div><h2 id="question">Ketika ada masalah, kamu lebih nyaman membicarakannya secara langsung atau menunggu waktu yang tepat?</h2></div><div class="answers" id="answers"></div></div><div class="buttons"><button class="secondary" id="prev" onclick="move(-1)" disabled>←　Sebelumnya</button><button class="primary next" id="next" onclick="move(1)">Selanjutnya　→</button></div></div><div class="result" id="result" id="hasil"><h2>Gambaran Hubungan Kalian 💙</h2><p>Ini bukan nilai benar atau salah, dan bukan ramalan apakah hubungan kalian akan berhasil. Gunakan hasilnya sebagai awal percakapan.</p><div class="resultbox" id="resultsummary"></div><h3>Hal yang bisa kalian coba</h3><ul id="tipslist"></ul><button class="primary" onclick="restart()">Ulangi kuis</button> <button class="secondary" onclick="window.print()">Simpan / Cetak hasil</button></div></section>
-<aside class="side"><div class="sidecard purpose"><h3>◎　Tujuan Kuis Ini</h3><p>Membantu kamu dan pasangan memahami perbedaan masing-masing, serta menemukan cara terbaik untuk menghadapinya bersama.</p></div><div class="sidecard"><h3>Topik yang Dibahas</h3><div class="topics"><div class="topic"><span>☏</span> Komunikasi</div><div class="topic"><span>♡</span> Emosi &amp; Reaksi</div><div class="topic"><span>▣</span> Gaya Hidup</div><div class="topic"><span>▤</span> Keuangan</div><div class="topic"><span>◷</span> Waktu &amp; Prioritas</div><div class="topic"><span>⚙</span> Kebiasaan</div><div class="topic"><span>☆</span> Nilai &amp; Masa Depan</div></div></div><div class="sidecard note"><strong>♡</strong><p>Perbedaan bukan penghalang, tapi jembatan untuk saling melengkapi.</p></div><div class="sidecard" id="tips"><h3>Tips sebelum mulai</h3><p>Jawab dengan jujur, bukan jawaban yang menurutmu paling disukai pasangan. Dengarkan dulu sebelum menanggapi. Kalian boleh berbeda pendapat.</p></div></aside></main>
-<footer class="footer" id="tentang"><div class="brand"><span class="heart">♥</span><div>HarmoniKita<small>Kenali · Pahami · Bertumbuh</small></div></div><p>Hubungan yang sehat dimulai dari keinginan untuk saling mengerti.</p></footer>
+<header>♥ HarmoniKita<small>Kenali · Pahami · Bertumbuh</small></header>
+
+<section class="hero">
+<div>
+<h1>Kenali Perbedaan,<br>Perkuat Hubungan</h1>
+<p>Jawab kuis bersama pasangan untuk memahami komunikasi, emosi, kepercayaan, dan masa depan kalian.</p>
+<button class="primary" onclick="document.getElementById('kuis').scrollIntoView({behavior:'smooth'})">Mulai Sekarang →</button>
+</div>
+<div class="heart">👩🏻‍❤️‍👨🏻</div>
+</section>
+
+<main id="kuis">
+<section class="card">
+<div id="setup">
+<h2>Kuis Berdua 💙</h2>
+<p>Buat ruang baru, lalu bagikan kode undangan kepada pasangan.</p>
+<label>Nama kamu</label>
+<input id="nama" value="Kamu" maxlength="30">
+<button class="primary" style="margin-top:12px" onclick="buatRuang()">Buat Ruang Pasangan</button>
+<hr style="border:0;border-top:1px solid #dce5f0;margin:22px 0">
+<label>Kode undangan</label>
+<input id="kodeMasuk" placeholder="Masukkan kode pasangan" style="text-transform:uppercase">
+<label>Nama kamu</label>
+<input id="namaMasuk" value="Erviana" maxlength="30">
+<button class="primary" style="margin-top:12px" onclick="gabungRuang()">Gabung dengan Kode →</button>
+<div id="undangan" class="summary hidden" style="margin-top:18px">
+<b>Kode undangan kalian:</b>
+<div id="kodeTampil" style="font-size:27px;font-weight:bold;letter-spacing:3px"></div>
+<button class="secondary" onclick="salinKode()">Salin Kode</button>
+<p>Bagikan kode ini kepada pasanganmu.</p>
+</div>
+<p id="status" class="status">Menghubungkan ke Firebase...</p>
+<button id="keluar" class="secondary hidden" onclick="keluarRuang()">Keluar dari ruang ini</button>
+</div>
+
+<div id="kuisView" class="hidden">
+<div style="display:flex;justify-content:space-between;font-size:13px">
+<span id="nomor"></span><span id="persen"></span>
+</div>
+<div class="progress"><div id="bar" class="bar"></div></div>
+<div class="question">
+<h2 id="pertanyaan"></h2>
+<div id="pilihan"></div>
+</div>
+<div class="actions">
+<button id="sebelum" class="secondary" onclick="pindah(-1)">← Sebelumnya</button>
+<button id="lanjut" class="primary" onclick="pindah(1)">Selanjutnya →</button>
+</div>
+</div>
+
+<div id="hasil" class="hidden">
+<h2>Hasil Kuis Kalian 💙</h2>
+<div id="ringkasan" class="summary"></div>
+<h3>Saran untuk kalian</h3>
+<ul>
+<li>Dengarkan alasan pasangan sampai selesai.</li>
+<li>Bicarakan kebutuhan tanpa saling menyalahkan.</li>
+<li>Sepakati solusi yang adil bagi kalian berdua.</li>
+<li>Jika emosi meningkat, ambil jeda dan lanjutkan setelah tenang.</li>
+</ul>
+<button class="secondary" onclick="window.print()">Cetak Hasil</button>
+<button class="primary" onclick="keluarRuang()">Kembali ke Awal</button>
+</div>
+</section>
+
+<aside>
+<div class="card"><h2>Tujuan Kuis</h2><p>Memahami perbedaan cara berpikir, kebutuhan emosional, dan harapan masing-masing.</p></div>
+<div class="card"><h2>Tips</h2><p>Jawab dengan jujur. Tidak ada jawaban yang otomatis benar atau salah.</p></div>
+</aside>
+</main>
+<footer>HarmoniKita — Hubungan yang sehat dimulai dengan saling memahami.</footer>
+
 <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
@@ -24,43 +123,279 @@ const firebaseConfig = {
   appId: "1:249820651521:web:b74f7ac2c6eed24218e000",
   measurementId: "G-YEWST4TM7E"
 };
+
 firebase.initializeApp(firebaseConfig);
 const auth = firebase.auth();
 const db = firebase.firestore();
-let roomCode = null, roomUnsubscribe = null, myUid = null, mySlot = null, roomData = null, syncing = false;
-const qs=[
-['Ketika ada masalah, kamu lebih nyaman membicarakannya secara langsung atau menunggu waktu yang tepat?',['Langsung membicarakannya saat itu juga.','Menunggu waktu yang lebih tenang.','Lebih suka menulis (chat) daripada bicara langsung.','Membutuhkan waktu sendiri dulu sebelum membahasnya.'],'Komunikasi'],
-['Saat kamu sedang sedih, dukungan seperti apa yang paling kamu butuhkan dari pasangan?',['Didengarkan tanpa langsung diberi solusi.','Diberi saran dan bantuan mencari jalan keluar.','Ditemani dan dipeluk.','Diberi ruang sebentar sampai siap bercerita.'],'Emosi & reaksi'],
-['Kalau kalian berbeda pendapat, apa yang biasanya kamu lakukan?',['Mencari solusi bersama saat itu juga.','Menenangkan diri dulu agar tidak berkata kasar.','Mengalah agar masalah cepat selesai.','Menyampaikan alasan sampai merasa dipahami.'],'Konflik'],
-['Bagaimana menurutmu soal memberi kabar saat sedang sibuk?',['Kabar singkat tetap penting.','Cukup kabari kalau ada waktu luang.','Tidak harus sering selama saling percaya.','Sebaiknya sepakati aturan bersama.'],'Komunikasi'],
-['Jika pasangan melakukan sesuatu yang membuatmu kecewa, kamu cenderung…',['Mengatakannya secara jujur dan tenang.','Diam dulu untuk memproses perasaan.','Memberi isyarat agar pasangan menyadari sendiri.','Mencari waktu yang tepat untuk membahasnya.'],'Emosi & reaksi'],
-['Apa arti waktu berkualitas bagimu?',['Menghabiskan waktu berdua tanpa gangguan HP.','Melakukan kegiatan atau hobi bersama.','Bisa ngobrol mendalam meski sebentar.','Tetap dekat walau masing-masing beraktivitas.'],'Waktu & prioritas'],
-['Bagaimana kamu melihat privasi dalam hubungan?',['Tetap ada privasi pribadi dan saling percaya.','Terbuka soal hal penting, tetapi tetap punya ruang.','Lebih nyaman berbagi akses dan aktivitas.','Batas privasi perlu dibicarakan sesuai kebutuhan.'],'Kepercayaan'],
-['Jika pasangan ingin pergi bersama teman, apa yang kamu rasakan?',['Senang, karena kami tetap punya kehidupan sendiri.','Nyaman jika memberi kabar dan jelas rencananya.','Agak khawatir dan ingin membahas batasan.','Tergantung situasi dan kesepakatan kami.'],'Kepercayaan'],
-['Bagaimana sebaiknya kalian mengambil keputusan besar?',['Diskusi sampai sama-sama sepakat.','Orang yang lebih paham memimpin keputusan.','Bergantian sesuai topik yang dibahas.','Masing-masing menyampaikan kebutuhan lalu kompromi.'],'Pengambilan keputusan'],
-['Bagaimana kamu memandang uang dalam hubungan serius?',['Keuangan dibicarakan terbuka dan direncanakan.','Masing-masing mengelola uang sendiri dengan kesepakatan.','Gabungkan sebagian untuk kebutuhan bersama.','Perlu menyesuaikan kondisi dan tahap hubungan.'],'Keuangan'],
-['Kalau salah satu sedang kesulitan keuangan, apa yang menurutmu adil?',['Membantu sesuai kemampuan tanpa memaksa.','Menyusun rencana bersama untuk sementara.','Tetap pisahkan tanggung jawab pribadi yang disepakati.','Bicarakan kebutuhan dan batas kemampuan dengan jujur.'],'Keuangan'],
-['Seberapa penting keterlibatan keluarga dalam keputusan pasangan?',['Penting mendengar keluarga, keputusan tetap bersama.','Keluarga perlu dilibatkan sejak awal.','Batas keluarga dan hubungan harus jelas.','Tergantung masalah dan dampaknya.'],'Keluarga'],
-['Jika kebiasaan sehari-hari kalian berbeda, kamu lebih memilih…',['Mencari rutinitas tengah yang nyaman.','Bergantian mengikuti kebiasaan masing-masing.','Membiarkan perbedaan selama tidak merugikan.','Membuat kesepakatan untuk hal yang penting.'],'Gaya hidup'],
-['Bagaimana kamu ingin pembagian tugas rumah dilakukan?',['Dibagi seimbang dan dibicarakan.','Berdasarkan waktu dan kemampuan masing-masing.','Fleksibel, saling membantu tanpa hitung-hitungan.','Ditentukan jelas agar tidak ada salah paham.'],'Gaya hidup'],
-['Apa yang kamu harapkan saat pasangan meminta waktu sendiri?',['Menghormatinya dan sepakati kapan terhubung lagi.','Memastikan dulu apakah ada masalah.','Memberi ruang tanpa banyak bertanya.','Membicarakan kebutuhan agar tidak terasa menjauh.'],'Batas pribadi'],
-['Bagaimana kamu biasanya menunjukkan kasih sayang?',['Lewat kata-kata dan apresiasi.','Lewat bantuan dan tindakan nyata.','Lewat sentuhan dan kedekatan.','Lewat waktu bersama dan perhatian kecil.'],'Kasih sayang'],
-['Jika pasangan lupa hal yang penting bagimu, apa yang kamu harapkan?',['Minta maaf dan berusaha memperbaiki.','Mengingatkan dengan jelas apa yang penting.','Membicarakan cara agar tidak terulang.','Memahami bahwa lupa bisa terjadi, asal ada usaha.'],'Harapan'],
-['Bagaimana kalian sebaiknya membahas pernikahan dan masa depan?',['Terbuka membahas tujuan, waktu, dan kesiapan.','Bertahap sesuai kesiapan emosional dan finansial.','Membuat target bersama yang bisa dievaluasi.','Mulai dari nilai dan harapan masing-masing.'],'Masa depan'],
-['Saat bertengkar, batas apa yang paling penting bagimu?',['Tidak menghina, mengancam, atau merendahkan.','Boleh jeda, tetapi harus kembali membahasnya.','Tidak mengumbar masalah pribadi ke orang lain.','Semua batas itu penting dan perlu disepakati.'],'Konflik'],
-['Apa yang paling ingin kamu bangun bersama pasangan?',['Rasa aman untuk jujur dan menjadi diri sendiri.','Kerja sama yang adil menghadapi masalah.','Kedekatan, perhatian, dan kebersamaan.','Tujuan hidup dan masa depan yang searah.'],'Nilai & masa depan']
+
+const ROOM_KEY = "harmonikita_roomCode_v3";
+const INDEX_KEY = "harmonikita_questionIndex_v3";
+let uid=null, roomCode=null, unsubscribe=null, roomData=null, mySlot=null;
+let index=0, names=["Kamu","Pasangan"];
+let answers=[Array(20).fill(null),Array(20).fill(null)];
+let busy=false;
+
+const $=id=>document.getElementById(id);
+
+const questions=[
+["Saat ada masalah, kamu lebih nyaman bagaimana?",["Membicarakannya langsung.","Menunggu waktu yang tenang.","Mengobrol lewat chat dahulu.","Menenangkan diri sendiri dahulu."],"Komunikasi"],
+["Saat sedih, dukungan apa yang kamu butuhkan?",["Didengarkan.","Diberi solusi.","Ditemani dan dipeluk.","Diberi ruang sebentar."],"Emosi"],
+["Saat berbeda pendapat, apa yang kamu lakukan?",["Mencari solusi bersama.","Menenangkan diri dahulu.","Mengalah agar cepat selesai.","Menjelaskan alasan sampai dipahami."],"Konflik"],
+["Bagaimana menurutmu tentang memberi kabar saat sibuk?",["Kabar singkat tetap penting.","Kabar saat ada waktu.","Tidak harus sering jika saling percaya.","Membuat kesepakatan bersama."],"Komunikasi"],
+["Jika pasangan membuatmu kecewa, kamu cenderung...",["Mengatakan dengan jujur.","Diam untuk memproses perasaan.","Memberi isyarat.","Mencari waktu tepat untuk bicara."],"Emosi"],
+["Apa arti waktu berkualitas bagimu?",["Berdua tanpa gangguan HP.","Melakukan kegiatan bersama.","Mengobrol mendalam.","Bersama walau beraktivitas masing-masing."],"Waktu bersama"],
+["Bagaimana pandanganmu soal privasi?",["Tetap punya privasi dan saling percaya.","Terbuka tentang hal penting.","Nyaman berbagi akses dan aktivitas.","Membicarakan batas privasi."],"Kepercayaan"],
+["Jika pasangan pergi bersama teman, kamu...",["Mendukung kehidupan sosialnya.","Nyaman jika diberi kabar.","Ingin membicarakan batasan.","Melihat situasinya."],"Kepercayaan"],
+["Bagaimana mengambil keputusan besar?",["Diskusi sampai sepakat.","Yang lebih paham memimpin.","Bergantian sesuai topik.","Kompromi setelah berdiskusi."],"Keputusan"],
+["Bagaimana mengelola uang dalam hubungan serius?",["Terbuka dan merencanakan bersama.","Mengelola sendiri dengan kesepakatan.","Menggabungkan sebagian uang.","Menyesuaikan kondisi hubungan."],"Keuangan"],
+["Jika salah satu kesulitan keuangan, apa yang adil?",["Membantu sesuai kemampuan.","Membuat rencana bersama.","Menjaga tanggung jawab masing-masing.","Membicarakan kemampuan secara jujur."],"Keuangan"],
+["Seberapa penting keterlibatan keluarga?",["Mendengarkan keluarga, keputusan tetap bersama.","Keluarga perlu dilibatkan sejak awal.","Batas keluarga harus jelas.","Tergantung masalahnya."],"Keluarga"],
+["Jika kebiasaan harian berbeda, kamu...",["Mencari rutinitas tengah.","Bergantian mengikuti kebiasaan.","Membiarkan perbedaan yang tidak merugikan.","Membuat kesepakatan."],"Gaya hidup"],
+["Bagaimana pembagian tugas rumah?",["Dibagi seimbang.","Berdasarkan waktu dan kemampuan.","Fleksibel dan saling membantu.","Ditentukan dengan jelas."],"Gaya hidup"],
+["Jika pasangan butuh waktu sendiri, kamu...",["Menghormati dan sepakati kapan bicara lagi.","Memastikan apakah ada masalah.","Memberi ruang.","Membicarakan kebutuhannya."],"Batas pribadi"],
+["Bagaimana kamu menunjukkan kasih sayang?",["Kata-kata dan apresiasi.","Bantuan dan tindakan nyata.","Sentuhan dan kedekatan.","Waktu bersama dan perhatian kecil."],"Kasih sayang"],
+["Jika pasangan lupa sesuatu yang penting, kamu...",["Mengharapkan permintaan maaf dan perbaikan.","Mengingatkan dengan jelas.","Membahas cara agar tidak terulang.","Memahami jika ada usaha memperbaiki."],"Harapan"],
+["Bagaimana membahas pernikahan dan masa depan?",["Terbuka soal tujuan dan kesiapan.","Bertahap sesuai kesiapan.","Membuat target yang dievaluasi.","Membahas nilai dan harapan dahulu."],"Masa depan"],
+["Saat bertengkar, batas apa yang penting?",["Tidak menghina atau merendahkan.","Boleh jeda tetapi harus membahas lagi.","Tidak menyebarkan masalah pribadi.","Semua batas tersebut penting."],"Konflik"],
+["Apa yang ingin kamu bangun bersama pasangan?",["Rasa aman untuk jujur.","Kerja sama yang adil.","Kedekatan dan perhatian.","Tujuan hidup dan masa depan."],"Masa depan"]
 ];
-let index=0, person=0, names=['Kamu','Erviana'], answers=[Array(qs.length).fill(null),Array(qs.length).fill(null)];const $=id=>document.getElementById(id);
-async function ensureAuth(){if(!auth.currentUser){await auth.signInAnonymously()}myUid=auth.currentUser.uid;return myUid}
-function makeCode(){const chars='ABCDEFGHJKLMNPQRSTUVWXYZ23456789';let out='';for(let i=0;i<10;i++)out+=chars[Math.floor(Math.random()*chars.length)];return out}
-async function createRoom(){try{await ensureAuth();const nm=$('myName').value.trim()||'Kamu';let code,ref;for(let i=0;i<5;i++){code=makeCode();ref=db.collection('rooms').doc(code);if(!(await ref.get()).exists)break}await ref.set({memberUids:[myUid],names:{[myUid]:nm},answers:{[myUid]:Array(qs.length).fill(null)},completed:{[myUid]:false},createdAt:firebase.firestore.FieldValue.serverTimestamp()});roomCode=code;mySlot=0;startRoomListener();$('inviteCode').textContent=code;$('inviteBox').classList.remove('hidden');$('roomStatus').textContent='Ruang berhasil dibuat. Kirim kode ini kepada pasanganmu.'}catch(e){console.error(e);$('roomStatus').textContent='Gagal membuat ruang: '+(e.message||e)+' Pastikan Firestore Rules sudah dipasang.'}}
-async function joinRoom(){try{await ensureAuth();const code=$('joinCode').value.trim().toUpperCase();if(!code){alert('Masukkan kode undangan dulu.');return}const ref=db.collection('rooms').doc(code);const snap=await ref.get();if(!snap.exists){alert('Kode tidak ditemukan. Periksa kembali kode undangan.');return}const data=snap.data();if((data.memberUids||[]).includes(myUid)){roomCode=code;mySlot=data.memberUids.indexOf(myUid)}else{if((data.memberUids||[]).length>=2){alert('Ruang ini sudah berisi dua orang.');return}await ref.update({memberUids:firebase.firestore.FieldValue.arrayUnion(myUid),['names.'+myUid]:$('joinName').value.trim()||'Pasangan',['answers.'+myUid]:Array(qs.length).fill(null),['completed.'+myUid]:false});roomCode=code;mySlot=1}startRoomListener();$('roomStatus').textContent='Berhasil bergabung. Kamu bisa mulai menjawab.'}catch(e){console.error(e);$('roomStatus').textContent='Gagal bergabung: '+(e.message||e)+' Pastikan Firestore Rules sudah dipasang.'}}
-function copyInvite(){navigator.clipboard?.writeText(roomCode).then(()=>alert('Kode disalin!')).catch(()=>alert('Kode undangan: '+roomCode))}
-function startRoomListener(){if(roomUnsubscribe)roomUnsubscribe();roomUnsubscribe=db.collection('rooms').doc(roomCode).onSnapshot(snap=>{if(!snap.exists)return;roomData=snap.data();const ids=roomData.memberUids||[];if(!ids.includes(myUid))return;mySlot=ids.indexOf(myUid);names=ids.map(uid=>(roomData.names||{})[uid]||'Pasangan');answers=ids.map(uid=>((roomData.answers||{})[uid]||Array(qs.length).fill(null)).slice());while(answers.length<2)answers.push(Array(qs.length).fill(null));if(ids.length===2){$('roomStatus').textContent='Kalian sudah terhubung. Jawaban tersimpan otomatis.';$('inviteBox').classList.add('hidden');$('setupview').classList.add('hidden');$('quizview').classList.remove('hidden');$('result').style.display='none';if(!syncing){syncing=true;render();syncing=false}if(ids.length===2&&ids.every(uid=>(roomData.completed||{})[uid]===true)&&$('quizview').classList.contains('hidden')===false){showResult()}}else{$('roomStatus').textContent='Menunggu pasangan bergabung dengan kode '+roomCode+'.'}} ,e=>{$('roomStatus').textContent='Koneksi database gagal: '+e.message})}
-async function saveMyAnswers(){if(!roomCode||!myUid)return;try{await db.collection('rooms').doc(roomCode).update({['answers.'+myUid]:answers[mySlot],['completed.'+myUid]:answers[mySlot].every(v=>v!==null)})}catch(e){console.error(e);alert('Jawaban belum berhasil disimpan. Periksa koneksi dan aturan Firestore.')}}
-function render(){let q=qs[index];$('progressText').textContent=`${names[mySlot]||'Kamu'} · Pertanyaan ${index+1} dari ${qs.length}`;$('percent').textContent=Math.round((index+1)/qs.length*100)+'%';$('bar').style.width=((index+1)/qs.length*100)+'%';$('question').textContent=q[0];$('answers').innerHTML='';q[1].forEach((a,i)=>{let el=document.createElement('div');el.className='answer'+(answers[mySlot][index]===i?' selected':'');el.innerHTML=`<span class="radio"></span><span class="letter">${'ABCD'[i]}.</span><span class="answertext"></span>`;el.querySelector('.answertext').textContent=a;el.onclick=()=>{answers[mySlot][index]=i;render();saveMyAnswers()};$('answers').appendChild(el)});$('prev').disabled=index===0;$('next').textContent=index===qs.length-1?'Selesai →':'Selanjutnya　→'}
-function move(dir){if(dir===1&&answers[mySlot][index]===null){alert('Pilih satu jawaban dulu, ya. Tidak ada jawaban benar atau salah.');return}if(dir===1&&index===qs.length-1){saveMyAnswers();if(roomData&&roomData.memberUids&&roomData.memberUids.length===2&&(roomData.memberUids.every(uid=>(roomData.completed||{})[uid]===true))){showResult();return}alert('Jawabanmu selesai dan tersimpan. Tunggu pasangan menyelesaikan kuis. Hasil perbandingan akan tersedia setelah keduanya selesai.');return}index=Math.max(0,Math.min(qs.length-1,index+dir));render()}
-function showResult(){ $('quizview').classList.add('hidden');$('result').style.display='block';$('result').scrollIntoView({behavior:'smooth',block:'start'});let same=0,different=[],byTopic={};qs.forEach((q,i)=>{let a=answers[0][i],b=answers[1][i];if(a===b)same++;else different.push(i);let t=q[2];if(!byTopic[t])byTopic[t]={same:0,diff:0};if(a===b)byTopic[t].same++;else byTopic[t].diff++});let pct=Math.round(same/qs.length*100);let html=`<div style="display:flex;gap:12px;flex-wrap:wrap"><div style="background:#e6f5ec;padding:15px;border-radius:12px;flex:1;min-width:120px"><div style="font-size:28px;font-weight:800;color:#28764b">${same}</div><b>Kesamaan</b><div style="font-size:12px">pertanyaan</div></div><div style="background:#fff3dc;padding:15px;border-radius:12px;flex:1;min-width:120px"><div style="font-size:28px;font-weight:800;color:#9b6815">${different.length}</div><b>Perbedaan</b><div style="font-size:12px">pertanyaan untuk didiskusikan</div></div></div><p><b>Ringkasan:</b> ${names[0]} dan ${names[1]} memilih jawaban yang sama pada ${pct}% pertanyaan. Ini hanya gambaran jawaban kalian, bukan skor kualitas atau jaminan kecocokan hubungan.</p><h3>Ringkasan per topik</h3><div style="overflow-x:auto"><table style="width:100%;border-collapse:collapse;font-size:14px"><tr><th style="text-align:left;padding:8px;border-bottom:1px solid #dce7f5">Topik</th><th style="padding:8px;border-bottom:1px solid #dce7f5">Sama</th><th style="padding:8px;border-bottom:1px solid #dce7f5">Berbeda</th></tr>`;Object.entries(byTopic).forEach(([t,v])=>{html+=`<tr><td style="padding:8px;border-bottom:1px solid #edf1f7">${t}</td><td style="text-align:center;padding:8px;border-bottom:1px solid #edf1f7">${v.same}</td><td style="text-align:center;padding:8px;border-bottom:1px solid #edf1f7">${v.diff}</td></tr>`});html+='</table></div><h3 style="margin-top:24px">Perbandingan setiap pertanyaan</h3>';
-qs.forEach((q,i)=>{let a=answers[0][i],b=answers[1][i],match=a===b;html+=`<article style="border:1px solid ${match?'#cce8d7':'#f1dfb8'};border-radius:12px;padding:15px;margin:12px 0;background:${match?'#f7fcf8':'#fffdf7'}"><div style="font-size:12px;color:#61738c">${i+1}. ${q[2]} · ${match?'💚 Jawaban sama':'💛 Jawaban berbeda'}</div><b style="display:block;margin:7px 0 12px">${q[0]}</b><p style="margin:5px 0"><b>${names[0]}:</b> ${'ABCD'[a]}. ${q[1][a]}</p><p style="margin:5px 0"><b>${names[1]}:</b> ${'ABCD'[b]}. ${q[1][b]}</p><div style="background:#eef4fb;padding:12px;border-radius:9px;margin-top:12px"><b>Bahas bersama</b><p style="margin:5px 0">${match?'Kalian memilih jawaban yang sama. Ceritakan alasan di balik pilihan masing-masing dan apakah ada situasi yang membuat kebutuhan kalian berbeda.':'Tidak ada jawaban yang otomatis salah. Tanyakan apa alasan dan kebutuhan di balik pilihan masing-masing, lalu cari kesepakatan yang menghormati keduanya.'}</p><p style="margin:5px 0"><b>Pertanyaan lanjutan:</b> “Apa yang membuat pilihan ini penting bagimu, dan apa yang bisa aku lakukan agar kamu merasa dipahami?”</p><label style="display:block;margin-top:8px;font-size:13px">Kesepakatan kecil kami (opsional)</label><textarea placeholder="Tuliskan kesepakatan yang ingin kalian coba..." style="width:100%;min-height:60px;padding:9px;border:1px solid #dce7f5;border-radius:8px;font:inherit"></textarea></div></article>`});$('resultsummary').innerHTML=html;$('tipslist').innerHTML='<li>Dengarkan alasan pasangan sampai selesai sebelum membantah atau menjelaskan sudut pandang sendiri.</li><li>Gunakan kalimat “Aku merasa…” dan “Aku membutuhkan…” daripada “Kamu selalu…”.</li><li>Pilih 2–3 perbedaan yang paling penting untuk dibahas terlebih dahulu; tidak perlu menyelesaikan semuanya sekaligus.</li><li>Sepakati langkah kecil yang realistis, lalu evaluasi bersama.</li><li>Jika diskusi mulai panas, ambil jeda dan sepakati kapan akan melanjutkan pembicaraan.</li>';$('result').insertAdjacentHTML('beforeend','<button class="secondary" onclick="window.print()">Simpan / Cetak hasil</button> <button class="primary" onclick="restart()">Mulai Ulang</button>');}
-function restart(){index=0;person=0;answers=[Array(qs.length).fill(null),Array(qs.length).fill(null)];$('result').style.display='none';$('quizview').classList.add('hidden');$('setupview').classList.remove('hidden');$('tes').scrollIntoView({behavior:'smooth'})}auth.signInAnonymously().then(()=>{$('roomStatus').textContent='Siap. Buat ruang atau masukkan kode undangan.'}).catch(e=>{$('roomStatus').textContent='Autentikasi gagal: '+e.message});render();
-</script></body></html>
+
+function setStatus(text){$("status").textContent=text}
+async function ensureAuth(){
+  if(!auth.currentUser) await auth.signInAnonymously();
+  uid=auth.currentUser.uid;
+  return uid;
+}
+function generateCode(){
+  const chars="ABCDEFGHJKLMNPQRSTUVWXYZ23456789";
+  let code="";
+  for(let i=0;i<8;i++)code+=chars[Math.floor(Math.random()*chars.length)];
+  return code;
+}
+async function buatRuang(){
+  if(busy)return;
+  busy=true;
+  try{
+    await ensureAuth();
+    let code,ref,available=false;
+    for(let i=0;i<5;i++){
+      code=generateCode();
+      ref=db.collection("rooms").doc(code);
+      if(!(await ref.get()).exists){available=true;break}
+    }
+    if(!available)throw Error("Gagal membuat kode. Coba lagi.");
+    const name=$("nama").value.trim()||"Kamu";
+    await ref.set({
+      memberUids:[uid],
+      names:{[uid]:name},
+      answers:{[uid]:Array(questions.length).fill(null)},
+      completed:{[uid]:false},
+      createdAt:firebase.firestore.FieldValue.serverTimestamp()
+    });
+    roomCode=code;
+    localStorage.setItem(ROOM_KEY,code);
+    index=0;
+    localStorage.setItem(INDEX_KEY,"0");
+    $("kodeTampil").textContent=code;
+    $("undangan").classList.remove("hidden");
+    setStatus("Ruang dibuat. Kirim kode undangan kepada pasangan.");
+    listenRoom();
+  }catch(e){
+    console.error(e);
+    setStatus("Gagal membuat ruang: "+e.message);
+  }finally{busy=false}
+}
+async function gabungRuang(){
+  if(busy)return;
+  busy=true;
+  try{
+    await ensureAuth();
+    const code=$("kodeMasuk").value.trim().toUpperCase();
+    if(!code){alert("Masukkan kode undangan dahulu.");return}
+    const ref=db.collection("rooms").doc(code);
+    const snap=await ref.get();
+    if(!snap.exists){alert("Kode tidak ditemukan. Periksa kembali.");return}
+    const data=snap.data(), members=data.memberUids||[];
+    if(!members.includes(uid)){
+      if(members.length>=2){alert("Ruang ini sudah berisi dua orang.");return}
+      const name=$("namaMasuk").value.trim()||"Pasangan";
+      await ref.update({
+        memberUids:firebase.firestore.FieldValue.arrayUnion(uid),
+        ["names."+uid]:name,
+        ["answers."+uid]:Array(questions.length).fill(null),
+        ["completed."+uid]:false
+      });
+    }
+    roomCode=code;
+    localStorage.setItem(ROOM_KEY,code);
+    index=0;
+    localStorage.setItem(INDEX_KEY,"0");
+    listenRoom();
+    setStatus("Berhasil bergabung. Memuat ruang...");
+  }catch(e){
+    console.error(e);
+    setStatus("Gagal bergabung: "+e.message);
+  }finally{busy=false}
+}
+function listenRoom(){
+  if(unsubscribe)unsubscribe();
+  if(!roomCode||!uid)return;
+  unsubscribe=db.collection("rooms").doc(roomCode).onSnapshot(snap=>{
+    if(!snap.exists){setStatus("Ruang tidak ditemukan. Buat ruang baru atau masukkan kode.");return}
+    roomData=snap.data();
+    const members=roomData.memberUids||[];
+    if(!members.includes(uid)){setStatus("Akun ini tidak terdaftar dalam ruang.");return}
+    mySlot=members.indexOf(uid);
+    names=members.map(id=>(roomData.names||{})[id]||"Pasangan");
+    answers=members.map(id=>Array.isArray((roomData.answers||{})[id])?(roomData.answers||{})[id].slice():Array(questions.length).fill(null));
+    while(answers.length<2)answers.push(Array(questions.length).fill(null));
+    $("setup").classList.add("hidden");
+    $("keluar").classList.remove("hidden");
+    if(members.length<2){
+      $("setup").classList.remove("hidden");
+      $("undangan").classList.remove("hidden");
+      $("kodeTampil").textContent=roomCode;
+      $("kuisView").classList.add("hidden");
+      $("hasil").classList.add("hidden");
+      setStatus("Menunggu pasangan bergabung. Kode: "+roomCode);
+      return;
+    }
+    $("undangan").classList.add("hidden");
+    const done=members.every(id=>(roomData.completed||{})[id]===true);
+    if(done){showResult();return}
+    $("hasil").classList.add("hidden");
+    $("kuisView").classList.remove("hidden");
+    setStatus("Kalian sudah terhubung. Jawaban tersimpan otomatis.");
+    drawQuestion();
+  },error=>{
+    console.error(error);
+    setStatus("Koneksi gagal: "+error.message);
+  });
+}
+async function saveAnswers(){
+  if(!roomCode||!uid||mySlot===null)return;
+  try{
+    const done=answers[mySlot].every(v=>v!==null);
+    await db.collection("rooms").doc(roomCode).update({
+      ["answers."+uid]:answers[mySlot],
+      ["completed."+uid]:done
+    });
+  }catch(e){
+    console.error(e);
+    setStatus("Jawaban gagal disimpan: "+e.message);
+  }
+}
+function drawQuestion(){
+  if(mySlot===null||!questions[index])return;
+  const q=questions[index];
+  $("nomor").textContent="Pertanyaan "+(index+1)+" dari "+questions.length;
+  $("persen").textContent=Math.round((index+1)/questions.length*100)+"%";
+  $("bar").style.width=((index+1)/questions.length*100)+"%";
+  $("pertanyaan").textContent=q[0];
+  $("pilihan").innerHTML="";
+  q[1].forEach((text,i)=>{
+    const option=document.createElement("div");
+    option.className="option"+(answers[mySlot][index]===i?" selected":"");
+    option.textContent="ABCD"[i]+". "+text;
+    option.onclick=async()=>{
+      answers[mySlot][index]=i;
+      drawQuestion();
+      await saveAnswers();
+    };
+    $("pilihan").appendChild(option);
+  });
+  $("sebelum").disabled=index===0;
+  $("lanjut").textContent=index===questions.length-1?"Selesai →":"Selanjutnya →";
+}
+async function pindah(direction){
+  if(mySlot===null)return;
+  if(direction===1&&answers[mySlot][index]===null){
+    alert("Pilih satu jawaban dahulu.");
+    return;
+  }
+  if(direction===1&&index===questions.length-1){
+    await saveAnswers();
+    alert("Jawabanmu selesai. Hasil muncul setelah pasangan menyelesaikan kuis.");
+    return;
+  }
+  index=Math.max(0,Math.min(questions.length-1,index+direction));
+  localStorage.setItem(INDEX_KEY,String(index));
+  drawQuestion();
+}
+function escapeText(text){
+  return String(text).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+}
+function showResult(){
+  $("kuisView").classList.add("hidden");
+  $("setup").classList.add("hidden");
+  $("hasil").classList.remove("hidden");
+  const members=roomData?.memberUids||[];
+  if(members.length!==2||!members.every(id=>(roomData.completed||{})[id]===true)){
+    $("ringkasan").textContent="Menunggu kedua peserta menyelesaikan kuis.";
+    return;
+  }
+  const a=answers[0],b=answers[1];
+  let same=0,topics={};
+  questions.forEach((q,i)=>{
+    const topic=q[2];
+    if(!topics[topic])topics[topic]={same:0,different:0};
+    if(a[i]===b[i]){same++;topics[topic].same++}
+    else topics[topic].different++;
+  });
+  let html="<h3>"+same+" dari "+questions.length+" jawaban sama</h3>";
+  html+="<p>"+escapeText(names[0])+" dan "+escapeText(names[1])+" memiliki "+(questions.length-same)+" jawaban berbeda untuk didiskusikan.</p>";
+  html+="<h3>Ringkasan per topik</h3><ul>";
+  Object.keys(topics).forEach(t=>{
+    html+="<li>"+escapeText(t)+": "+topics[t].same+" sama, "+topics[t].different+" berbeda</li>";
+  });
+  html+="</ul><h3>Perbandingan jawaban</h3>";
+  questions.forEach((q,i)=>{
+    html+='<div class="result-item"><b>'+(i+1)+". "+escapeText(q[0])+"</b>";
+    html+="<p><b>"+escapeText(names[0])+":</b> "+(a[i]===null?"Belum menjawab":"ABCD"[a[i]]+". "+escapeText(q[1][a[i]]))+"</p>";
+    html+="<p><b>"+escapeText(names[1])+":</b> "+(b[i]===null?"Belum menjawab":"ABCD"[b[i]]+". "+escapeText(q[1][b[i]]))+"</p>";
+    html+="<p><b>Diskusikan:</b> "+(a[i]===b[i]?"Ceritakan alasan di balik pilihan kalian.":"Tanyakan alasan masing-masing dan cari kesepakatan yang menghormati kalian berdua.")+"</p></div>";
+  });
+  $("ringkasan").innerHTML=html;
+}
+function salinKode(){
+  if(!roomCode)return;
+  if(navigator.clipboard&&navigator.clipboard.writeText){
+    navigator.clipboard.writeText(roomCode).then(()=>alert("Kode berhasil disalin: "+roomCode)).catch(()=>alert("Kode undangan: "+roomCode));
+  }else alert("Kode undangan: "+roomCode);
+}
+function keluarRuang(){
+  if(unsubscribe){unsubscribe();unsubscribe=null}
+  localStorage.removeItem(ROOM_KEY);
+  localStorage.removeItem(INDEX_KEY);
+  roomCode=null;mySlot=null;roomData=null;index=0;
+  answers=[Array(questions.length).fill(null),Array(questions.length).fill(null)];
+  $("setup").classList.remove("hidden");
+  $("kuisView").classList.add("hidden");
+  $("hasil").classList.add("hidden");
+  $("undangan").classList.add("hidden");
+  $("keluar").classList.add("hidden");
+  setStatus("Kamu keluar dari ruang pada perangkat ini. Masukkan kode untuk bergabung lagi.");
+}
+async function start(){
+  try{
+    await auth.setPersistence(firebase.auth.Auth.Persistence.LOCAL);
+    await ensureAuth();
+    const saved=localStorage.getItem(ROOM_KEY);
+    const savedIndex=Number(localStorage.getItem(INDEX_KEY)||0);
+    if(Number.isInteger(savedIndex)&&savedIndex>=0&&savedIndex<questions.length)index=savedIndex;
+    if(saved){
+      roomCode=saved;
+      setStatus("Memulihkan ruang pasangan...");
+      listenRoom();
+    }else{
+      setStatus("Siap. Buat ruang atau masukkan kode undangan.");
+    }
+  }catch(e){
+    console.error(e);
+    setStatus("Login Firebase gagal: "+e.message+". Pastikan Anonymous Sign-in aktif di Firebase Authentication.");
+  }
+}
+start();
+</script>
+</body>
+</html>
