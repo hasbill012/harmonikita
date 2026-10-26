@@ -8,205 +8,6 @@
 <title>HarmoniKita ♡ Ruang Cerita Kita</title>
   
 <style>
-/* HARMONIKITA — TEMA CREAM & COKELAT */
-:root {
-  --cream: #f7f1e7;
-  --pink: #eee2d2;
-  --pink2: #dfc9ad;
-  --rose: #98704d;
-  --wine: #593f2d;
-  --ink: #49392d;
-  --muted: #887766;
-  --white: #fffdf8;
-  --line: #e8dccb;
-  --green: #e5eee2;
-  --gold: #f5ead4;
-  --shadow: 0 12px 35px #5d44200d;
-}
-
-/* Latar dan navigasi */
-body {
-  background: var(--cream);
-  color: var(--ink);
-}
-
-header {
-  background: #f7f1e7ed;
-  border-color: var(--line);
-}
-
-.brand,
-.brand .heart,
-nav a,
-h2,
-h3,
-.topic-result h4,
-.person-answer b,
-.essay-card h4 {
-  color: var(--wine);
-}
-
-.hero h1 {
-  color: var(--wine);
-}
-
-.hero p,
-.muted {
-  color: var(--muted);
-}
-
-/* Tombol */
-.btn-primary {
-  background: linear-gradient(135deg, #9d7956, #6f4d35);
-  color: #fffdf8;
-  box-shadow: 0 6px 16px #593f2d18;
-}
-
-.btn-soft {
-  background: #eee3d3;
-  color: var(--wine);
-  border-color: var(--line);
-}
-
-/* Kartu dan bidang isian */
-.panel,
-.side-card,
-.stat,
-details {
-  background: #fffdf8;
-  border-color: var(--line);
-}
-
-input,
-textarea {
-  background: #fffdf8;
-  color: var(--ink);
-  border-color: var(--line);
-}
-
-input:focus,
-textarea:focus {
-  border-color: #a88764;
-  box-shadow: 0 0 0 3px #d8c2a633;
-}
-
-/* Ringkasan hasil */
-.summary-hero {
-  background: linear-gradient(135deg, #eee2d2, #fbf7ef);
-  border: 1px solid var(--line);
-}
-
-.stat {
-  border-radius: 18px;
-}
-
-.stat strong {
-  color: var(--wine);
-}
-
-.eyebrow,
-.topic-label {
-  background: #eee3d3;
-  color: #78583b;
-}
-
-/* Hasil per topik */
-.topic-result {
-  background: #fffdf8;
-  border-color: var(--line);
-  border-radius: 19px;
-}
-
-.mini-progress {
-  background: #eee5d8;
-}
-
-.mini-progress span {
-  background: linear-gradient(90deg, #c5a783, #806044);
-}
-
-/* Perbandingan jawaban */
-details {
-  border-radius: 18px;
-}
-
-summary {
-  color: var(--wine);
-}
-
-summary:after {
-  color: #98704d;
-}
-
-.comparison {
-  background: #f8f3ea;
-  border-color: var(--line);
-}
-
-.person-answer {
-  background: #fffdf8;
-  border: 1px solid #eee5d8;
-  border-radius: 13px;
-}
-
-/* Status jawaban */
-.same-tag {
-  background: #e5eee2;
-  color: #456344;
-}
-
-.diff-tag {
-  background: #f5ead4;
-  color: #86622e;
-}
-
-/* Surat kecil dari hati */
-.essay-card {
-  background: #fffdf8;
-  border: 1px solid #e4d4bf;
-  border-radius: 20px;
-  padding: 18px;
-  box-shadow: 0 5px 18px #593f2d08;
-}
-
-.essay-answer {
-  background: #f7f1e7;
-  color: #49392d;
-  border-radius: 12px;
-  line-height: 1.8;
-  padding: 14px;
-}
-
-.waiting {
-  background: #f5ead4;
-  color: #78583b;
-}
-
-.footer {
-  color: var(--muted);
-}
-
-.footer strong {
-  color: var(--wine);
-}
-
-/* Tampilan HP */
-@media (max-width: 800px) {
-  .summary-hero {
-    padding: 17px;
-  }
-
-  .essay-card {
-    padding: 14px;
-  }
-
-  .comparison {
-    padding: 11px;
-  }
-}
-</style>
-  
-<style>
 :root{
   --cream:#fffaf5;
   --pink:#f9e2e5;
@@ -388,85 +189,116 @@ details[open]>summary:after{content:"−"}
   details{break-inside:avoid}
 }
 </style>
-  
 <style>
-/* HARMONIKITA — OVERRIDE TEMA CREAM & COKELAT */
+/* HARMONIKITA — TEMA CREAM & COKELAT */
 :root {
-  --cream: #f7f1e7 !important;
-  --pink: #eee2d2 !important;
-  --pink2: #dfc9ad !important;
-  --rose: #98704d !important;
-  --wine: #604632 !important;
-  --ink: #49392d !important;
+  --cream: #f7f1e7;
+  --pink: #eee2d2;
+  --pink2: #dfc9ad;
+  --rose: #98704d;
+  --wine: #593f2d;
+  --ink: #49392d;
+  --muted: #887766;
+  --white: #fffdf8;
+  --line: #e8dccb;
+  --green: #e5eee2;
+  --gold: #f5ead4;
+  --shadow: 0 12px 35px #5d44200d;
 }
 
 body {
-  background: #f7f1e7 !important;
-  color: #49392d !important;
+  background: var(--cream) !important;
+  color: var(--ink) !important;
 }
 
-header, .panel, .side-card, .stat,
-.comparison, .person-answer, .essay-card {
+header {
+  background: #f7f1e7ed !important;
+  border-color: var(--line) !important;
+}
+
+.brand, nav a, h2, h3, .hero h1,
+.topic-result h4, .person-answer b,
+.essay-card h4, summary {
+  color: var(--wine) !important;
+}
+
+.hero p, .muted, .footer {
+  color: var(--muted) !important;
+}
+
+.hero-art {
+  background: linear-gradient(145deg, #dfc9ad, #fffdf8) !important;
+}
+
+.floating, .panel, .side-card, .stat,
+.topic-result, .person-answer, .essay-card, details {
   background-color: #fffdf8 !important;
-  border-color: #e4d4bf !important;
+  border-color: var(--line) !important;
 }
 
-button, .btn-primary {
-  background-color: #98704d !important;
+.eyebrow, .topic-label, .topic-chip span {
+  background: #eee3d3 !important;
+  color: #78583b !important;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #9d7956, #6f4d35) !important;
   color: #fffdf8 !important;
 }
 
 .btn-soft {
-  background-color: #eee2d2 !important;
-  color: #604632 !important;
+  background: #eee3d3 !important;
+  color: var(--wine) !important;
+  border-color: var(--line) !important;
 }
 
-input, textarea {
-  background-color: #fffdf8 !important;
-  color: #49392d !important;
-  border-color: #dfc9ad !important;
-}
-</style>
-  
-<style>
-/* HARMONIKITA — OVERRIDE TEMA CREAM & COKELAT */
-:root {
-  --cream: #f7f1e7 !important;
-  --pink: #eee2d2 !important;
-  --pink2: #dfc9ad !important;
-  --rose: #98704d !important;
-  --wine: #604632 !important;
-  --ink: #49392d !important;
+input, textarea, .answer {
+  background: #fffdf8 !important;
+  color: var(--ink) !important;
+  border-color: var(--line) !important;
 }
 
-body {
+.answer:hover, .answer.selected {
+  background: #eee2d2 !important;
+  border-color: #98704d !important;
+}
+
+.progress, .mini-progress {
+  background: #eee5d8 !important;
+}
+
+.bar, .mini-progress span {
+  background: linear-gradient(90deg, #c5a783, #806044) !important;
+}
+
+.summary-hero {
+  background: linear-gradient(135deg, #eee2d2, #fbf7ef) !important;
+}
+
+.comparison {
+  background: #f8f3ea !important;
+}
+
+.essay-answer {
   background: #f7f1e7 !important;
-  color: #49392d !important;
+  color: var(--ink) !important;
 }
 
-header, .panel, .side-card, .stat,
-.comparison, .person-answer, .essay-card {
-  background-color: #fffdf8 !important;
-  border-color: #e4d4bf !important;
+.same-tag {
+  background: #e5eee2 !important;
+  color: #456344 !important;
 }
 
-button, .btn-primary {
-  background-color: #98704d !important;
-  color: #fffdf8 !important;
+.diff-tag {
+  background: #f5ead4 !important;
+  color: #86622e !important;
 }
 
-.btn-soft {
-  background-color: #eee2d2 !important;
-  color: #604632 !important;
-}
-
-input, textarea {
-  background-color: #fffdf8 !important;
-  color: #49392d !important;
-  border-color: #dfc9ad !important;
+.waiting {
+  background: #f5ead4 !important;
+  color: #78583b !important;
 }
 </style>
-
 </head>
 
 <body>
